@@ -14,18 +14,18 @@ def merge_sort(string: str) -> str:
 
 def merge(left: str, right: str) -> str:
     result = []
-    l, r = 0, 0
+    l_index, r_index = 0, 0
 
-    while l < len(left) and r < len(right):
-        if left[l] < right[r]:
-            result.append(left[l])
-            l += 1
+    while l_index < len(left) and r_index < len(right):
+        if left[l_index] < right[r_index]:
+            result.append(left[l_index])
+            l_index += 1
         else:
-            result.append(right[r])
-            r += 1
+            result.append(right[r_index])
+            r_index += 1
 
-    result += left[l:]
-    result += right[r:]
+    result += left[l_index:]
+    result += right[r_index:]
 
     return "".join(result)
 
