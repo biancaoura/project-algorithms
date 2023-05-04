@@ -1,4 +1,6 @@
-def is_palindrome_recursive(word: str, low_index: int, high_index: int) -> bool:
+def is_palindrome_recursive(
+        word: str, low_index: int, high_index: int
+) -> bool:
     if low_index > high_index and word:
         return True
 
